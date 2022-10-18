@@ -64,6 +64,7 @@ var fetchWeather = (event) => {
       let latitude = response.coord.lat;
       let longitude = response.coord.lon;
       let uvQueryURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${APIKey}`;
+
       fetch(uvQueryURL)
         .then(handleErrors)
         .then((response) => {
